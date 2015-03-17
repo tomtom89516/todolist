@@ -16,7 +16,7 @@ var Listview = React.createClass({
 		actions.toggle(itemidx);
 	}
 	,renderItem:function(item,idx) {
-		return <div >
+		return <div key={idx}>
 		<li data-idx={idx} onClick={this.toggleDone}
 			className={item.done?"done":""}>{item.caption}</li></div>
 	}

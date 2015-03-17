@@ -2750,7 +2750,7 @@ var Listview = React.createClass({displayName: "Listview",
 		actions.toggle(itemidx);
 	}
 	,renderItem:function(item,idx) {
-		return React.createElement("div", null, 
+		return React.createElement("div", {key: idx}, 
 		React.createElement("li", {"data-idx": idx, onClick: this.toggleDone, 
 			className: item.done?"done":""}, item.caption))
 	}
